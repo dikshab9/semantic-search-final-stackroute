@@ -1,0 +1,182 @@
+<!-- <div class="main"> -->
+  <mat-sidenav-container class="example-container" class="main">
+    
+    <mat-sidenav #sidenav class="example-sidenav testclass" mode="push">
+        <!-- <img src="../../assets/angular2-logo.png" class="logo-img" alt="logo"/> -->
+        <i class="inline-icon material-icons">language</i>SEMENTIC SEARCH
+      
+      <hr>
+        <!-- <button mat-button class="button"><a [routerLink]="['/sidebar']" class="ahref"><i class="inline-icon material-icons">dashboard</i>Dashboard</a>
+        </button>
+        <button mat-button class="button">
+          <a [routerLink]="['/search']"  routerLinkActive="active" class="ahref"><i class="inline-icon material-icons">search</i>Search</a>
+        </button>
+        <button mat-button class="button" (click)="chatnav.open()">
+         <a class="ahref"><i class="inline-icon material-icons">chat</i>Chatbot</a>
+        </button>
+        <button mat-button class="button" (click)="chatnav.open()">
+            
+            <a class="ahref"><i class="inline-icon material-icons">account_circle</i>Admin</a>
+           </button>
+           <button mat-button class="button" (click)="chatnav.open()">
+              
+              <a class="ahref"><i class="inline-icon material-icons">visibility</i>Domain Expert</a>
+             </button> -->
+             <button mat-button class="button">
+              
+              <a class="ahref" [routerLink]="['/main']"><i class="material-icons">power_settings_new</i>Logout</a>
+             </button>
+    </mat-sidenav>
+  
+      <button type="button" mat-button (click)="sidenav.open()" class="btn-color">
+        <i class="inline-icon material-icons">apps</i>
+      </button>
+  
+      <!-- <div class="searchbar"><app-displayresults></app-displayresults></div> -->
+  
+      <div class="searchbar">
+      
+      <!-- <app-header></app-header> -->
+      
+      
+      <br>
+      <div class="container">
+      <div class="row">
+              
+              <div class="col-sm-9">
+                <form role="search">
+                  <div class="input-group add-on">
+                    
+                      <form class="example-form font-color">
+                          <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Domain" #sendValue value={{concept}}>
+                          </mat-form-field>
+                          
+      
+                          <mat-form-field class="example-full-width">
+                              <input matInput placeholder="Concept" #sendIntent value={{intent}}>
+                            </mat-form-field>
+      
+                        </form>
+      
+                       <div class="input-group-btn">
+                        <button mat-raised-button color="primary" type="button" (click)="onClick(sendValue.value,sendIntent.value)" class="btn-color">
+                          Search
+                        </button>
+      
+                      </div>             
+                  </div>
+                </form>
+       
+      
+                <div class="row" id="link">
+                  
+                  <div *ngFor="let item of serverResponse" class="roww">
+                      <a href="{{item.urlFromGoogle.name}}" id="title"><h3>{{item.urlFromGoogle.title}}</h3></a>
+                      <a href="{{item.urlFromGoogle.name}}"  id="url" ><h5 class="linkcolor">{{item.urlFromGoogle.name}}</h5></a>
+                      <h5>{{item.urlFromGoogle.snippet}}</h5>
+        
+                  </div>
+              </div>
+  
+                <!-- <div *ngFor="let item of serverResponse">
+                  {{item.urlFromGoogle.name}}
+                  <h1>tatti</h1>
+                  <div class="roww">
+                    <a id="title"  href="{{item.id}}"><h3><b>{{item.id}}</b></h3></a>
+                    
+                    <a id="url" href="{{item.items.link}}"><h4>{{item.items.link}}</h4></a>
+                    
+                    <h5><p>{{item.items.snippet}}</p></h5>
+                    
+      
+                </div>
+                
+                </div> -->
+      
+                <!-- <div class="row" id="link">
+                      
+                      <div *ngFor="let item of serverResponse" class="roww">
+                          <h4><a href="{{item.items.title}}" id="title">{{item.items.title}}</a></h4>
+                          <h6><a href="{{item.items.link}}"  id="url">{{item.items.link}}</a></h6>
+                          <h5>{{item.items.snippet}}</h5>
+  
+                          <a id="title"><h3><b>Java Interfaces</b></h3></a>
+                          
+                          <a id="url"><h4>http://tutorials.jenkov.com/java/interfaces.html</h4></a>
+                          
+                          <h5><p>Java includes a concept called interfaces. A Java interface is a bit like a class, \nexcept a Java interface can only contain method signatures and fields. An Java ...</p></h5>
+                          
+            
+                      </div> -->
+                  <!-- </div> -->
+                  <!-- <div class="row" id="link" *ngFor="let item of serverResponse">
+                      
+                      <div class="roww">
+                          <a id="title"><h3><b>Java Interfaces</b></h3></a>
+                          
+                          <a id="url"><h4>http://tutorials.jenkov.com/java/interfaces.html</h4></a>
+                          
+                          <h5><p>Java includes a concept called interfaces. A Java interface is a bit like a class, \nexcept a Java interface can only contain method signatures and fields. An Java ...</p></h5>
+                          {{tatti.id}}
+            
+                      </div>
+                  </div> -->
+                  <!-- <div class="row" id="link">
+                      
+                      <div class="roww">
+                          <a id="title"><h3><b>Java Interfaces</b></h3></a>
+                          
+                          <a id="url"><h4>http://tutorials.jenkov.com/java/interfaces.html</h4></a>
+                          
+                          <h5><p>Java includes a concept called interfaces. A Java interface is a bit like a class, \nexcept a Java interface can only contain method signatures and fields. An Java ...</p></h5>
+                          
+            
+                      </div>
+                  </div> -->
+                  
+      
+      
+              </div>
+            </div>
+      
+          </div><!--end of container-->
+      
+      </div><!--end of searchbar-->
+    
+    
+  
+  
+     
+      
+    
+    </mat-sidenav-container>
+  
+    <mat-sidenav #chatnav class="example-sidenav-right" mode="push" align="end">
+        
+      
+         
+        <chat-dialog></chat-dialog>
+      </mat-sidenav>
+  
+      <mat-sidenav #adminpanel class="example-sidenav-right" mode="push" align="end">
+          
+        //adminpanel
+        </mat-sidenav>
+  
+  
+      <!-- </div> -->
+  
+  
+  
+      <!-- <mat-sidenav #adminlogin class="example-sidenav-right" mode="push" align="end" >
+          
+        
+           
+          <chat-dialog></chat-dialog>
+        </mat-sidenav> -->
+  
+  
+  
+    
+  

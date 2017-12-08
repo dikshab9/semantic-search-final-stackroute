@@ -1,0 +1,79 @@
+
+<div class="searchbar">
+
+<!-- <app-header></app-header> -->
+
+
+<br>
+<div class="container">
+<div class="row">
+        <div>
+        </div>
+        <div class="col-sm-9">
+          <form role="search">
+            <div class="input-group add-on">
+              
+                <form class="example-form font-color">
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Search in Java" #sendValue value={{concept}}>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Intent" #sendintent value={{intent}}>
+                      </mat-form-field>
+
+                  </form>
+
+                 <div class="input-group-btn">
+                  <button mat-raised-button color="primary" type="button" (click)="onClick(sendValue.value,sendintent.value)" class="btn-color">
+                    Search
+                  </button>
+
+                </div>             
+            </div>
+          </form>
+ 
+
+
+          <div class="row" id="link">
+                
+                <div *ngFor="let item of fetchedUrls" class="roww">
+                    <h4><a href="{{item.items.title}}" id="title">{{item.items.title}}</a></h4>
+                    <h6><a href="{{item.items.link}}"  id="url">{{item.items.link}}</a></h6>
+                    <h5>{{item.items.snippet}}</h5>
+      
+                </div>
+            </div>
+            <div class="row" id="link">
+                
+                <div class="roww">
+                    <a id="title"><h3><b>Java Interfaces</b></h3></a>
+                    
+                    <a id="url"><h4>http://tutorials.jenkov.com/java/interfaces.html</h4></a>
+                    
+                    <h5><p>Java includes a concept called interfaces. A Java interface is a bit like a class, \nexcept a Java interface can only contain method signatures and fields. An Java ...</p></h5>
+                    
+      
+                </div>
+            </div>
+            <div class="row" id="link">
+                
+                <div class="roww">
+                    <a id="title"><h3><b>Java Interfaces</b></h3></a>
+                    
+                    <a id="url"><h4>http://tutorials.jenkov.com/java/interfaces.html</h4></a>
+                    
+                    <h5><p>Java includes a concept called interfaces. A Java interface is a bit like a class, \nexcept a Java interface can only contain method signatures and fields. An Java ...</p></h5>
+                    
+      
+                </div>
+            </div>
+            
+
+
+        </div>
+      </div>
+
+    </div><!--end of container-->
+
+</div><!--end of searchbar-->

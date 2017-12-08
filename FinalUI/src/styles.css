@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+body,html{
+    background-color:transparent;
+    height: 100%;
+}
+
+html { 
+    
+    overflow-x:hidden;
+    /* http://lightersideofrealestate.com/wp-content/uploads/2014/09/clouds-background-light.jpg */
+    background-image: url(app/assets/background.jpg) ;
+                background-position: center center;
+                background-repeat:  no-repeat;
+                background-attachment: fixed;
+                background-size:  cover;
+    
+
+    
+  }

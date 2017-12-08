@@ -1,0 +1,48 @@
+.example-card {
+    width: 400px;
+  }
+  
+  
+  .card1{
+      
+        height: 90px;
+        width:150px;
+        text-align: center;
+        float: left;
+        margin-top: 350px;
+        margin-left: 200px;
+        background-color:transparent;
+        position: relative;
+        
+        /* background-image: url('./assets/java.png'); */
+        border:3px solid  white;
+        background-color:#032030;
+        border-radius: 10px;
+        /* opacity: 0.8; */
+        
+  }
+
+  .domainicon{
+        height: 130px;
+        width: 130px;
+      
+        
+  }
+
+  .title{
+    color: white;
+    margin-left: 360px;
+    margin-top: 140px;
+    font-weight: bold;
+    position: fixed;
+  }
+
+  .domaintopics{
+    color: white;
+    position: relative;
+    margin-top: 5px;
+  }
+  
+
+ 
+ 
