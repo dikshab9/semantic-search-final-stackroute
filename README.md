@@ -3,7 +3,7 @@ Semantic search is a search engine which is build on top of Google API and provi
 
 The indexing pipeline consists of the google API, crawler, parser and indexer. the result from indexer goes to a neo4j concept graph .
 
-Google API: takesthe domain and concept from domain expert and searches for the same in Google. Brings back around 40 results(links) 
+Google API: takes the domain and concept from domain expert and searches for the same in Google. Brings back around 40 results(links) 
 Crawler:Takes each link and converts it to xml format before sending it to parser
 Parser: calculates the term score. i.e: number of times the term occurs in a document. Eg: one of the base node in neo4j intent graph is
 basic which consists of sub terms like fundamental,main etc . parser gives scores to all these terms based on their number of occurences in 
